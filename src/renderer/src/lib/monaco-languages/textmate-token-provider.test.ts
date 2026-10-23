@@ -142,6 +142,7 @@ describe('createTextMateTokensProvider', () => {
   })
 
   it.each([
+    ['Lean', loadLeanTextMateGrammar, '/-'.repeat(40000), 'def value : Nat := 42'],
     ['Nim', loadNimTextMateGrammar, 'abcdefghij'.repeat(8000), 'proc greet() = discard'],
     ['Typst', loadTypstTextMateGrammar, '#let x = 12pt; *b* $x^2$ '.repeat(2000), '#let y = 2']
   ])(
